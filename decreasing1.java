@@ -18,3 +18,5 @@ public class decreasing1 {
         dec(n);
     }
 }
+
+
