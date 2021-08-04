@@ -3,15 +3,21 @@ import java.util.*;
 public class maximumarray {
     public static int maximum(int arr[],int idx)
     {
-        int max=arr[0];
-        for(int i=0;i<arr.length;i++)
+        if(idx==arr.length-1)
         {
-            if(arr[i]>arr[0])
-            {
-                max=arr[i];
-            }
+            return arr[idx];
         }
-        return max; 
+        //misa=minimum in smaller array
+        int misa =maximum(arr,idx+1);
+        if(misa>arr[idx])
+        {
+            return misa;
+        }
+        else
+        {
+            return arr[idx];
+        }
+        
     }
 
     public static void main(String[] args)
